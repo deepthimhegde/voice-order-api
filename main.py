@@ -6,7 +6,6 @@ orders_queue = Orders()
 
 @app.route('/')
 def index():
-   print('Request for index page received')
    return "Welcome!"
 
 @app.route('/orders', methods = ['GET'])
