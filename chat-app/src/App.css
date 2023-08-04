@@ -1,0 +1,30 @@
+.App {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 90vh;
+  width: 100vh;
+  margin: .5em;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.App .MessageList {
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.App .MessageForm {
+  background: #eee;
+  border-top: 1px solid #ccc;
+  border-radius: 0 0 3px 3px;
+  box-sizing: border-box;
+  flex: 0 0 30px;
+}
+
+.App .SpeechToText {
+  background: #eeeeee;
+  box-sizing: border-box;
+  flex: 0 0 1px;
+}
