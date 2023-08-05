@@ -4,17 +4,18 @@ import mic_off from './mic_off.png';
 import './SpeechToText.css'
 class SpeechToText extends Component {
     state = {
-        closed: true
+        off: this.props.mic_status
     }
-    toggleImage = () => {
-        this.setState(state => ({ closed: !state.closed }))
+    toggleStatus = () => {
+        this.setState(state => ({ off: !state.off }))
+        this.props.onMicStatusChange(this.state.off)
     }
-    getImageName = () => this.state.closed ? mic_off : mic_on
+    getImageName = () => this.state.off ? mic_off : mic_on
     render() {
       return (
         <div className="SpeechToText">
 
-            <button onClick={this.toggleImage}>
+            <button onClick={this.toggleStatus}>
                 <img src={this.getImageName()} className="Mic-logo" alt="Mic" />
             </button> 
         </div>
